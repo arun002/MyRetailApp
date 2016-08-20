@@ -1,6 +1,7 @@
 package com.myretail.dao;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -29,6 +30,18 @@ public class ProductPriceDAO {
 		Query query = new Query(Criteria.where("productId").is(productId));
 		return mongo.findOne(query, ProductDocument.class);
 	}
+	
+	
+	/**
+	 * 
+	 * @param productId
+	 * @return ProductDocument
+	 */
+	public List<ProductDocument> retrieveAllProdcut() {
+		return mongo.findAll(ProductDocument.class);
+	}
+
+	
 
 	/**
 	 * @param productId
