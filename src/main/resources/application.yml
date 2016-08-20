@@ -11,3 +11,10 @@ myretail:
     fields: descriptions
     id_type: TCIN
     key: 43cJWpLjH8Z8oR18KdrZDBKAgLLQKJjz
+    prdNotFoundCode: 410
+    prdNotFoundMsg: Product Id is not found
+    requestNotValidCode: 412
+    requestNotValidMsg: Request is not valid
+    genErrorCode: 500
+    genErrorMsg: Service is unavailable now
+    

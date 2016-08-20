@@ -25,6 +25,18 @@ public class ProductServiceProperties {
 	private String id_type;
 	
 	private String key;
+	
+	private String prdNotFoundCode;
+	
+	private String prdNotFoundMsg;
+	
+	private String requestNotValidCode;
+	
+	private String requestNotValidMsg;
+	
+	private String genErrorCode;
+	
+	private String genErrorMsg;
 
 	@ManagedAttribute
 	public String getProductDetailsUrl() {
@@ -64,6 +76,66 @@ public class ProductServiceProperties {
 	@ManagedAttribute
 	public void setKey(String key) {
 		this.key = key;
+	}
+
+	@ManagedAttribute
+	public String getPrdNotFoundCode() {
+		return prdNotFoundCode;
+	}
+
+	@ManagedAttribute
+	public void setPrdNotFoundCode(String prdNotFoundCode) {
+		this.prdNotFoundCode = prdNotFoundCode;
+	}
+
+	@ManagedAttribute
+	public String getPrdNotFoundMsg() {
+		return prdNotFoundMsg;
+	}
+
+	@ManagedAttribute
+	public void setPrdNotFoundMsg(String prdNotFoundMsg) {
+		this.prdNotFoundMsg = prdNotFoundMsg;
+	}
+
+	@ManagedAttribute
+	public String getRequestNotValidCode() {
+		return requestNotValidCode;
+	}
+
+	@ManagedAttribute
+	public void setRequestNotValidCode(String requestNotValidCode) {
+		this.requestNotValidCode = requestNotValidCode;
+	}
+
+	@ManagedAttribute
+	public String getRequestNotValidMsg() {
+		return requestNotValidMsg;
+	}
+
+	@ManagedAttribute
+	public void setRequestNotValidMsg(String requestNotValidMsg) {
+		this.requestNotValidMsg = requestNotValidMsg;
+	}
+
+	@ManagedAttribute
+	public String getGenErrorCode() {
+		return genErrorCode;
+	}
+
+	@ManagedAttribute
+	public void setGenErrorCode(String genErrorCode) {
+		this.genErrorCode = genErrorCode;
+	}
+
+	@ManagedAttribute
+	public String getGenErrorMsg() {
+		return genErrorMsg;
+	}
+
+	@ManagedAttribute
+	public void setGenErrorMsg(String genErrorMsg) {
+		this.genErrorMsg = genErrorMsg;
 	}
 
 }

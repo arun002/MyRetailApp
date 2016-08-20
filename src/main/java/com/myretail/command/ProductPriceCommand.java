@@ -34,11 +34,11 @@ public class ProductPriceCommand {
 		Price price = null;
 		if(null != doc){
 			price = new Price();
-			price.setCurrenceCode(doc.getCurrencyCode());
+			price.setCurrencyCode(doc.getCurrencyCode());
 			price.setValue(doc.getPrice());
 			log.info("Price is "+price.getValue());
 		}else{
-			log.error("Product id "+productId+" not found");
+			log.error("Product id "+productId+" is not found");
 		}
 		return price;
 	}
@@ -55,11 +55,11 @@ public class ProductPriceCommand {
 		Price price = null;
 		if(null != doc){
 			price = new Price();
-			price.setCurrenceCode(doc.getCurrencyCode());
+			price.setCurrencyCode(doc.getCurrencyCode());
 			price.setValue(doc.getPrice());
 			log.info("New Price is "+newPrice);
 		}else{
-			log.error("Product id "+productId+" not found");
+			log.error("Product id "+productId+" is not found");
 		}
 		return price;
 	}
