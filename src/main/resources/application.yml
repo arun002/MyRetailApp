@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb: 
+      uri: mongodb://localhost:27017/myretaildb
+  jmx:
+    default-domain: MyRetailApp
+       
+myretail: 
+  product: 
+    productDetailsUrl: https://api.target.com/products/v3/
+    fields: descriptions
+    id_type: TCIN
+    key: 43cJWpLjH8Z8oR18KdrZDBKAgLLQKJjz
