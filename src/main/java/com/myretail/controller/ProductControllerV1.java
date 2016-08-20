@@ -23,7 +23,7 @@ import com.myretail.service.ProductService;
  *
  */
 @RestController
-@RequestMapping("/myretail")
+@RequestMapping("/myretail/v1/products")
 public class ProductControllerV1 {
 	
 	private static final Logger log = LogManager.getLogger(ProductControllerV1.class);
@@ -36,7 +36,7 @@ public class ProductControllerV1 {
 	 * @param id
 	 * @return ProductServiceResponse
 	 */
-	@RequestMapping(value = "/v1/product/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public @ResponseBody ProductServiceResponse getProductById(@PathVariable("id") Integer id){
 		log.info("getProductById () "+ id);
 		long startTime = new Date().getTime();
@@ -54,7 +54,7 @@ public class ProductControllerV1 {
 	 * @param request
 	 * @return ProductServiceResponse
 	 */
-	@RequestMapping(value = "/v1/product/{id}", method = RequestMethod.PUT, produces = { MediaType.APPLICATION_JSON_VALUE })
+	@RequestMapping(value = "/{id}", method = RequestMethod.PUT, produces = { MediaType.APPLICATION_JSON_VALUE })
 	public @ResponseBody ProductServiceResponse updateProductPrice(@PathVariable("id") Integer id, @RequestBody ProductServiceRequest request){
 		log.info("updateProductPrice () " +id);
 		long startTime = new Date().getTime();
