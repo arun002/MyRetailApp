@@ -51,7 +51,7 @@ Prerequisites :
     "currencyCode" : "USD"
 	}
 
-Steps to Build and Run the application via commandline:
+#Steps to Build and Run the application via command line:
 
 1. git clone https://github.com/arun002/MyRetailApp.git
 
@@ -70,9 +70,9 @@ Request :
 
 METHOD:GET
 
-URL: http://localhost:8080/myretail/v1/products/{productId}
+URL: http://localhost:8080/myretail/v1/products/{productId} 
 
-Sample URL : http://localhost:8080/myretail/v1/products/15117729
+Sample URL : http://localhost:8080/myretail/v1/products/15117729 
 
 Response:
 
@@ -87,15 +87,34 @@ Response:
   }
 }
 
+Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/src/main/resources/ProductAPI.png 
+
+Error Details:
+
+---------------------
+Error Code - 410
+
+Error Message - Product Id is not found
+
+Scenario - Product Id  passed  is not found in data store
+
+----------------
+
+Error Code - 500
+
+Error Message - Service is unavailable now
+
+Scenario - If there is any exception thrown in the application.
+
 #Update Product Price by Product ID
 
 Request :
 
 METHOD:PUT
 
-URL: http://localhost:8080/myretail/v1/products/{productId}
+URL: http://localhost:8080/myretail/v1/products/{productId} 
 
-Sample URL : http://localhost:8080/myretail/v1/products/15117729
+Sample URL : http://localhost:8080/myretail/v1/products/15117729 
 
 Request Header :
 
@@ -104,7 +123,7 @@ Content-Type : application/json
 Request Body :
 
 {
-    "price":340.99
+    "price":320.99
 }
 
 Response:
@@ -113,8 +132,43 @@ Response:
   "product": {
     "id": 15117729,
     "current_price": {
-      "value": 2233.99,
+      "value": 320.99,
       "currency_code": "USD"
     }
   }
 }
+
+Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/src/main/resources/UpdatePriceAPI.png 
+
+
+Error Details:
+
+---------------------
+Error Code - 410
+
+Error Message - Product Id is not found
+
+Scenario - Product Id  passed  is not found in data store
+
+-----------------
+
+Error Code - 412
+
+Error Message - Request is not valid
+
+Scenario - Request body does not contain 'price'  field
+
+----------------
+
+Error Code - 500
+
+Error Message - Service is unavailable now
+
+Scenario - If there is any exception thrown in the application. 
+
+
+#Testing Results
+
+Tests are run during the build process. Run the below command, to run it separately
+
+mvn test
