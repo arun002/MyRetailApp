@@ -19,7 +19,8 @@ import com.myretail.dao.domain.ProductDocument;
 @Repository
 public class ProductPriceDAO {
 
-	@Autowired MongoTemplate mongo;
+	@Autowired 
+	MongoTemplate mongo;
 
 	/**
 	 * 

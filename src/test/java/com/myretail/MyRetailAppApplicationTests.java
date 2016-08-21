@@ -31,10 +31,6 @@ public class MyRetailAppApplicationTests {
 	ProductControllerV1 controller;
 	
 	@Test
-	public void contextLoads() {
-	}
-	
-	@Test
 	public void testFindAllProducts(){
 		List<ProductDocument> prodList = priceDAO.retrieveAllProdcut();
 		assertNotNull(prodList);
