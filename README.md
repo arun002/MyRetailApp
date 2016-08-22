@@ -76,6 +76,30 @@ java -jar -Dspring.profiles.active=production target/myretailapp-0.0.1-SNAPSHOT.
 
 #APIs
 
+#Health Check 
+
+Request:
+
+METHOD :GET 
+
+URL: http://localhost:8080/health
+
+Response:
+
+{
+  "status": "UP",
+  "diskSpace": {
+    "status": "UP",
+    "total": 974807408640,
+    "free": 833895628800,
+    "threshold": 10485760
+  },
+  "mongo": {
+    "status": "UP",
+    "version": "3.2.9"
+  }
+}
+
 #Get Product Details By Product ID
 
 Request :
