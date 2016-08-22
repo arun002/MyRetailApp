@@ -2,7 +2,7 @@ spring:
   data:
     mongodb: 
       uri: mongodb://localhost:27017/myretaildb
-  
+  profiles: dev
   jmx:
     default-domain: MyRetailApp
        

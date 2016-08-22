@@ -11,6 +11,8 @@ Technology and Frameworks Used :
 
 Prerequisites :
 
+Before building the application , need to create local MongoDB instance.
+
 1. Install latest version of MongoDB.
 2. Install MongoDB client - Robomongo and create the data base 'myretaildb' and create collection 'product' under 'myretaildb'.
 3. Insert documents inside the  collection 'product'
@@ -51,7 +53,7 @@ Prerequisites :
     "currencyCode" : "USD"
 	}
 
-#Steps to Build and Run the application via command line:
+#Steps to Build and Run the application in local via commandline:
 
 1. git clone https://github.com/arun002/MyRetailApp.git
 
@@ -60,6 +62,18 @@ Prerequisites :
 3. mvn package
 
 4. java -jar target/myretailapp-0.0.1-SNAPSHOT.jar
+	
+Note:
+
+Created Profile for different envs - dev, qa, perf and prod
+
+java -jar -Dspring.profiles.active=dev target/myretailapp-0.0.1-SNAPSHOT.jar
+
+java -jar -Dspring.profiles.active=qa target/myretailapp-0.0.1-SNAPSHOT.jar
+
+java -jar -Dspring.profiles.active=perf target/myretailapp-0.0.1-SNAPSHOT.jar
+
+java -jar -Dspring.profiles.active=production target/myretailapp-0.0.1-SNAPSHOT.jar
 
 
 #APIs
