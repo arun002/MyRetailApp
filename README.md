@@ -63,9 +63,7 @@ Before building the application , need to create local MongoDB instance.
 
 4. java -jar target/myretailapp-0.0.1-SNAPSHOT.jar
 	
-Note:
-
-Created Profile for different envs - dev, qa, perf and prod
+Note: Created Profile for different envs - dev, qa, perf and prod
 
 java -jar -Dspring.profiles.active=dev target/myretailapp-0.0.1-SNAPSHOT.jar
 
@@ -101,7 +99,7 @@ Response:
   }
 }
 
-Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/src/main/resources/ProductAPI.png 
+Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/ProductAPI.png
 
 Error Details:
 
@@ -152,7 +150,7 @@ Response:
   }
 }
 
-Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/src/main/resources/UpdatePriceAPI.png 
+Screenshot of the API call : https://github.com/arun002/MyRetailApp/blob/master/UpdatePriceAPI.png
 
 
 Error Details:
