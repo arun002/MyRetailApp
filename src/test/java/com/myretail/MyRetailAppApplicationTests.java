@@ -89,14 +89,19 @@ public class MyRetailAppApplicationTests {
 	public void testUpdateProductPriceWithValidProductId(){
 		Integer id = 16752456;
 		ProductServiceRequest request = new ProductServiceRequest();
-		request.setPrice(new BigDecimal("45.10"));
+		request.setPrice(new BigDecimal("45.11"));
 		ProductServiceResponse response = controller.updateProductPrice(id, request);
 		assertNotNull(response);
 		assertNull(response.getError());
 		assertNotNull(response.getProduct());
 		assertEquals("16752456",response.getProduct().getId().toString());
-		assertEquals("45.10",response.getProduct().getCurrentPrice().getValue().toString());
-		assertEquals("USD",response.getProduct().getCurrentPrice().getCurrencyCode());
+		assertEquals("45.11",response.getProduct().getCurrentPrice().getValue().toString());
+		response = controller.getProductById(id);
+		assertNotNull(response);
+		assertNull(response.getError());
+		assertNotNull(response.getProduct());
+		assertEquals("16752456",response.getProduct().getId().toString());
+		assertEquals("45.11",response.getProduct().getCurrentPrice().getValue().toString());
 	}
 	
 
