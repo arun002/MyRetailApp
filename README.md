@@ -11,7 +11,7 @@ Technology and Frameworks Used :
 
 Prerequisites :
 
-Before building the application , need to create local MongoDB instance.
+Before building the application , need to create local MongoDB instance and insert data into the collection.
 
 1. Install latest version of MongoDB.
 2. Install MongoDB client - Robomongo and create the data base 'myretaildb' and create collection 'product' under 'myretaildb'.
