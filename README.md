@@ -53,6 +53,8 @@ Before building the application , need to create local MongoDB instance and inse
     "currencyCode" : "USD"
 	}
 
+4. Make sure MongoDB server is started.
+
 #Steps to Build and Run the application in local via commandline:
 
 1. git clone https://github.com/arun002/MyRetailApp.git
